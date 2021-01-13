@@ -339,6 +339,10 @@ p {
   margin-top: 1rem;
 }
 
+.hero__content .content .title {
+  color: #242942;
+}
+
 .hero__content .content .desc {
   margin-top: 1rem;
   font-size: 1.1em;
