@@ -1,0 +1,119 @@
+.hero {
+  overflow: hidden;
+  @media screen and(min-width: $desktop) {
+    margin-top: 4rem;
+  }
+  &__container {
+    @media screen and(min-width: $desktop) {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+    }
+  }
+  &__img {
+    img {
+      width: 155%;
+      position: relative;
+      right: 22px;
+
+      @media screen and(min-width: $tablet) {
+        width: 100%;
+      }
+    }
+    @media screen and(min-width: $desktop) {
+      width: 50%;
+      img {
+        display: none;
+      }
+      &::after {
+        content: url(../../images/illustration-devices.svg);
+      }
+    }
+    //   z-index: 1;
+    //   margin-top: 1rem;
+    //   background-image: url(../../images/illustration-devices.svg);
+    //   background-repeat: no-repeat;
+    //   background-size: contain;
+    //   max-width: 960px;
+    //   height: 265px;
+    //   width: 145%;
+    // @media screen and(min-width: $desktop) {
+    //   z-index: unset;
+    //   background-size: cover;
+    //   max-width: unset;
+    //   height: unset;
+    //   background-position: right top;
+    //   width: 960px;
+    // }
+    &::before {
+      content: '';
+      width: 50vw;
+      position: absolute;
+      height: 60vh;
+      background-color: $clr-neutral4;
+      top: 0;
+      right: 0;
+      border-radius: 0 0 0 4rem;
+      z-index: -99;
+    }
+  }
+  &__content {
+    overflow: hidden;
+    margin-top: 3rem;
+    .caption {
+      padding: 0.25rem 0 0 0;
+      .new {
+        background-color: $clr-neutral;
+        color: #fff;
+        font-weight: bold;
+        padding: 0.2rem 0.4rem;
+        border-radius: 10px;
+        margin-right: 0.5rem;
+      }
+      p {
+        color: $clr-neutral2;
+        // font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-size: 0.9rem;
+      }
+    }
+    .content {
+      width: 90%;
+
+      margin-top: 1rem;
+      .title {
+      }
+      .desc {
+        margin-top: 1rem;
+        font-size: 1.1em;
+
+        @media screen and(min-width: $desktop) {
+          font-size: 1.18em;
+          width: 62%;
+          color: $clr-neutral2;
+        }
+      }
+    }
+    .cta-btn {
+      margin-top: 1.25rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 5rem;
+      @media screen and(min-width: $tablet) {
+        justify-content: flex-start;
+      }
+
+      @media screen and(min-width: $desktop) {
+        margin-top: 3rem;
+        justify-content: flex-start;
+      }
+
+      .white {
+        background-color: #fff;
+        color: $clr-neutral2;
+      }
+    }
+  }
+}
